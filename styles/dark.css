@@ -1,4 +1,5 @@
 :root.theme-dark {
+  --background-fon: #000028;
   --cover-image: url("../images/cover-image-dark.png");
   --header-text: #db00ff;
   --back-of-text: #ff0070;
@@ -6,4 +7,5 @@
   --textH: #ff0070;
   --textP: #f1b2ce;
   --button-border: #ff007066;
+  --rec: inline;
 }

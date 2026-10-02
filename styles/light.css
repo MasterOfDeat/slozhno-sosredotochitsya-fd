@@ -1,4 +1,5 @@
 :root.theme-light {
+  --background-fon: #fff1f7;
   --cover-image: url("../images/cover-image-light.png");
   --header-text: #ffc2e6;
   --back-of-text: #ff8dcb;
@@ -6,14 +7,12 @@
   --textH: #353430;
   --textP: #353430;
   --button-border: #32312d66;
-}
-
-.theme-light .rec {
-  display: none;
+  --rec: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --background-fon: #fff1f7;
     --cover-image: url("../images/cover-image-light.png");
     --header-text: #ffc2e6;
     --back-of-text: #ff8dcb;
@@ -21,12 +20,6 @@
     --textH: #353430;
     --textP: #353430;
     --button-border: #32312d66;
-  }
-
-  .theme-light .rec {
-    display: none;
-  }
-  .theme-auto .rec {
-    display: none;
+    --rec: none;
   }
 }

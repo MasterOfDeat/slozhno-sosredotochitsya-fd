@@ -1,6 +1,7 @@
 .page {
   margin: 0 auto;
   object-fit: cover;
+  background-color: var(--background-fon);
   background-image: var(--cover-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -12,11 +13,12 @@
   position: absolute;
   top: 10px;
   right: 38px;
+  display: var(--rec);
   color: var(--textH);
   font-family: var(--font-family);
   font-weight: normal;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 1.4em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -60,7 +62,7 @@
   display: grid;
   height: 100vh;
   min-height: 668px;
-  margin-bottom: 40px;
+  margin-block-end: 40px;
   grid-gap: 55px;
 }
 
@@ -85,10 +87,11 @@
   font-family: var(--font-family);
   font-weight: normal;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1em;
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -123,7 +126,7 @@
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 1.3em;
 }
 
 .title-decor {
@@ -135,12 +138,12 @@
 }
 
 .section__title {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   color: var(--textH);
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 1.3em;
 }
 
 .section__smalltitle {
@@ -149,7 +152,7 @@
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
 .section__text {
@@ -157,7 +160,7 @@
   font-family: var(--font-family);
   font-weight: normal;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 1.3em;
 }
 
 .section_list {
@@ -166,8 +169,8 @@
   gap: 20px;
 }
 
-.section__main_title {
-  margin: 0;
+.section__fish_title {
+  margin-block-end: 20px;
 }
 
 .section__smallertitle {
@@ -181,7 +184,8 @@
 }
 
 .content__link:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid var(--textP);
+  text-decoration: none;
 }
 
 .content__link:focus-visible {
@@ -234,7 +238,7 @@
   .header {
     gap: 10px;
     min-height: 1024px;
-    margin-bottom: 60px;
+    margin-block-end: 60px;
   }
 
   .rec {
@@ -266,10 +270,25 @@
     max-width: 236px;
   }
 
-  .section_right {
+  .section_fish,
+  .section_hard {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+  }
+
+  .section_fish .section__title {
+    grid-column: 1 / 2;
+    grid-row: 1 /3;
+  }
+
+  .section__fish_title {
+    grid-column: 2 / 3;
+    margin: 0;
+  }
+
+  .section_fish .section_list {
+    grid-column: 2 / 3;
   }
 
   .pic {
